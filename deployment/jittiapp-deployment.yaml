@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jitti-app
+  namespace: jittiapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jitti-app
+  template:
+    metadata:
+      labels:
+        app: jitti-app
+    spec:
+      containers:
+      - name: jitti-app
+        image: quay.io/jitjiam/jitti-app:latest
+        ports:
+        - containerPort: 8080
