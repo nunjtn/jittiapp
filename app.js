@@ -15,7 +15,7 @@ router.get('/',function(req,res){
 });
 
 router.get('/sharks',function(req,res){
-    res,sendFile(path + 'sharks.html')
+    res.sendFile(path + 'sharks.html')
 });
 
 app.use(express.static(path));
