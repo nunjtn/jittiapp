@@ -1,4 +1,4 @@
-FROM registry.redhat.io/rhel8/nodejs-12
+FROM registry.redhat.io/rhel7/nodejs-12
 
 WORKDIR /app
 
