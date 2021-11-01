@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package*.json .
 USER root
-RUN yum install httpd
+RUN yum repolist
 COPY . .
 
 EXPOSE 8080
