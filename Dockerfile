@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package*.json .
 USER root
-RUN yum repolist
+RUN yum --disablerepo=* --enablerepo=rhel-7-server-rpms install yum-utils
 COPY . .
 
 EXPOSE 8080
