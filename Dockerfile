@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package*.json .
 USER root
-RUN npm install
+RUN yum install httpd
 COPY . .
 
 EXPOSE 8080
