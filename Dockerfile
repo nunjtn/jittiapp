@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package*.json .
 USER root
-RUN yum install yum-utils
+RUN yum repolist
 COPY . .
 
 EXPOSE 8080
