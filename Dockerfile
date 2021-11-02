@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package*.json .
 USER root
-RUN yum repolist
+RUN yum-config-manager --disable cdn* && yum repolist
 COPY . .
 
 EXPOSE 8080
