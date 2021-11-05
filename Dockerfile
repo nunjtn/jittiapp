@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package*.json .
 USER root
-RUN yum-config-manager --disable ubi* && yum repolist && yum install httpd
+RUN rm /etc/yum.repos.d/ubi.repo && yum install -y httpd
 COPY . .
 
 EXPOSE 8080
